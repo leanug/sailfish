@@ -2,12 +2,11 @@ import React from 'react'
 import Layout from '../components/Layout'
 import styled from 'styled-components'
 import Image from 'gatsby-image'
-import { setPostMaxWidth, setFont } from '../styles/styles'
 import { graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const Wrapper = styled.section`
-  max-width: ${ setPostMaxWidth.width };
+  
   width: 90vw;
   margin: 0 auto;
 
@@ -39,7 +38,6 @@ const Wrapper = styled.section`
   }
 
   .body {
-    font-family: ${ setFont.secondaryFont };
     margin-top: 2.5rem;
   }
   

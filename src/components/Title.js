@@ -1,9 +1,9 @@
 import React from "react"
 import styled from 'styled-components'
 
-const Title = ({ title, text }) => {
+const Title = ({ title, text, textAlign }) => {
   return (
-    <Wrapper>
+    <Wrapper className={ textAlign }>
       <h2 className="display-2">{ title || 'default title' }</h2>
       { text && <p>{ text }</p> }
     </Wrapper>
@@ -13,8 +13,8 @@ const Title = ({ title, text }) => {
 const Wrapper = styled.div`
   margin-bottom: 4em;
 
-  h2 {
-    text-align: center;
+  .center {
+    text-align: center
   }
 
   & > p {

@@ -6,29 +6,25 @@ import styled from 'styled-components'
 import { 
   setBreakpoint, 
   setGridGap, 
-  setColor,
   setTransition } from '../styles/'
-import SocialLinks from '../constants/socialLinks'
+import logo from '../assets/logo.svg'
 
 const Navbar = ({ toggleSidebar }) => {
   return (
     <Nav>
         <NavCenter>
             <div className="logo-wrap">
-                {/* <img src={logo} alt="logo" /> */}
+                <img src={ logo } alt="logo" />
                 <Link to="/">
-                    <span className="logo">Erica Legrand</span>
+                    <span className="logo">Sailfish</span>
                 </Link>
             </div>
             <div className="nav-links">
                 <Links styleClass="navbar-links" />
             </div>
-            <div className="icons">
-                <SocialLinks styleClass="social-icons-header" />
-                <button onClick={ toggleSidebar } className="toggle-btn">
-                    <FaBars />
-                </button>
-            </div>
+            <button onClick={ toggleSidebar } className="toggle-btn">
+                <FaBars />
+            </button>
         </NavCenter>    
     </Nav>
   )
@@ -36,11 +32,10 @@ const Navbar = ({ toggleSidebar }) => {
 
 const Nav = styled.nav`
     display: flex;
-    background: ${ setColor.colorPi_2 };
-    border-bottom: 1px solid ${ setColor.colorDelta_2 };
+    background: transparent;
     justify-content: center;
-    position: fixed;
-  top: 0;
+    position: absolute;
+    top: 0;
     width: 100%;
     z-index: 10;
 `
@@ -58,12 +53,7 @@ const NavCenter = styled.div`
     display: grid;
     justify-content: start;
     grid-auto-flow: column;
-    align-items: baseline;
-    grid-gap: ${ setGridGap.gridGap };
-  }
-
-  .logo-img {
-    background-image: url('../assets/logo.svg');
+    align-items: center;
   }
 
   .logo-icon {
@@ -74,6 +64,7 @@ const NavCenter = styled.div`
 
   img {
     margin-right: 1.5rem;
+    max-height: 3rem;
   }
 
   .logo {
@@ -93,7 +84,6 @@ const NavCenter = styled.div`
   .toggle-btn {
     background: transparent;
     border-color: transparent;
-    color: ${ setColor.colorSigma };
     cursor: pointer;
     font-size: 2rem;
     margin-left: 3rem;
@@ -108,8 +98,8 @@ const NavCenter = styled.div`
   @media screen and (min-width: ${ setBreakpoint.medium }) {
     & {
         display: grid;
-        grid-template-columns: repeat( 3, 1fr );
-        column-gap: 1rem;
+        grid-template-columns: repeat( 2, 1fr );
+        column-gap: 2rem;
         align-items: center;
     }
 
@@ -118,35 +108,8 @@ const NavCenter = styled.div`
     }
 
     .nav-links {
-        justify-content: center;
-        display: flex;
-        text-transform: uppercase;
-    }
-
-    .social-icons-header {
-        display: flex;
         justify-content: end;
-    }
-
-    .page-link {
-        margin-right: 1rem;
-    }
-
-    .page-link {
-      font-weight: bold;
-      font-size: 1rem;
-      cursor: pointer;
-      padding: 0.25rem 0.5rem;
-    }
-
-    .nav-icons {
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .nav-icons .social-icon {
-      font-size: 1.5rem;
-      margin-left: 0.5rem;
+        display: flex;
     }
   }
 `

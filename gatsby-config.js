@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: "Erica Legrand",
-    titleTemplate: "%s · Erica Legrand",
+    title: "Sailfish Apps",
+    titleTemplate: "%s · Sailfish",
     description:
-      "Hogwarts Potions master, Head of Slytherin house and former Death Eater.",
-    url: "https://gatsfolio.netlify.app", // No trailing slash allowed!
+      "We make fast websites.",
+    url: "https://www.sailfishapps.com",
     image: "/screenshot.jpg", // Path to your image you placed in the 'static' folder
     twitterUsername: "",
   },
@@ -47,7 +47,7 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Roboto",
+              family: "Rubik",
               variants: ["400", "500", "700"],
               fontDisplay: 'swap',
               strategy: 'selfHosted',

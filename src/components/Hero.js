@@ -1,12 +1,13 @@
 import React from 'react';
-import Background from './Background'
+import Image from 'gatsby-image'
 import styled from 'styled-components'
+import Background from './Background'
 import { useStaticQuery, graphql } from "gatsby"
 import { BsChevronDown } from 'react-icons/bs'
 
 const query = graphql`
   {
-    file(relativePath: { eq: "home2.jpg" }) {
+    file(relativePath: { eq: "home.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 1920) {
           ...GatsbyImageSharpFluid
@@ -25,13 +26,15 @@ const Hero = () => {
 
     return (
         <Wrapper>
-            <Background
-                image={ fluid }
-            >
-                <article className="fade-in">
-                    <p>Hello, I'm Erica</p>
+            <Background>
+                <div>
+                    <h1>Hello, I'm Erica</h1>
                     <p className="h1">Blockchain Software Developer</p>
-                </article>
+                </div>
+                <div>
+                    <h1>Hello, I'm Erica</h1>
+                    <p className="h1">Blockchain Software Developer</p>
+                </div>
                 <BsChevronDown className="icon" />
             </Background>
         </Wrapper>
@@ -40,6 +43,9 @@ const Hero = () => {
 
 const Wrapper = styled.div`
     article {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 2rem;
         width: 90vw;
         max-width: 80rem;
         text-align: center;

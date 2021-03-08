@@ -22,8 +22,8 @@ const Globals = createGlobalStyle`
     }
 
     body {
-        background:  ${ setColor.colorPi_2 };
-        color:       ${ setColor.colorSigma };
+        background:  ${ setColor.sigma };
+        color:       ${ setColor.delta_1 };
         font-family: ${ setFont.primaryFont };
         font-size: 1.5em;
         line-height: 2;
@@ -34,7 +34,7 @@ const Globals = createGlobalStyle`
     }
     
     a {
-        color: ${ setColor.colorSigma };
+        color: ${ setColor.delta_1 };
         text-decoration: none;
         ${ setTransition() };
     }
@@ -44,47 +44,48 @@ const Globals = createGlobalStyle`
         text-decoration: none;
     }
 
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        color: ${ setColor.colorSigma };
+    h1, .h1,
+    h2, .h2,
+    h3, .h3,
+    h4, .h4,
+    h5, .h5,
+    h6, .h6 {
         font-family: ${ setFont.primaryFont };
-        font-weight: 500;
         line-height: 1.25;
         text-transform: capitalize;
     }
 
-    h1 { font-size: 2em; }
-    h2 { font-size: 1.8em; }
-    h3 { font-size: 1.3em; }
-    h4 { font-size: 1.1em; }
-    h5 { font-size: 1em; }
-    h6 { font-size: 0.875em; }
+    h1, .h1 { font-size: 2em; }
+    h2, .h2 { font-size: 1.8em; }
+    h3, .h3 { font-size: 1.3em; }
+    h4, .h4 { font-size: 1.1em; }
+    h5, .h5 { font-size: 1em; }
+    h6, .h6 { font-size: 0.875em; }
 
     @media screen and ( min-width: ${ setBreakpoint.medium } ) {
-        h1 { font-size: 2.4em; }
-        h2 { font-size: 2em; }
-        h3 { font-size: 1.6em; }
-        h4 { font-size: 1.3em; }
-        h5 { font-size: 1em; }
-        h6 { font-size: 0.875em; }
+        h1, .h1 { font-size: 3em; }
+        h2, .h2 { font-size: 2em; }
+        h3, .h3 { font-size: 1.6em; }
+        h4, .h4 { font-size: 1.3em; }
+        h5, .h5 { font-size: 1em; }
+        h6, .h6 { font-size: 0.875em; }
     }
 
-    .display-1 { font-size: 3em; }
-    .display-2 { font-size: 2.8em; }
-    .display-3 { font-size: 1.5em; }
+    .display-1, 
+    .display-2, 
+    .display-3 {
+        font-family: ${ setFont.primaryFont };
+        font-weight: 700;
+        line-height: 1.1;
+     }
+
+    .display-1 { font-size: 6rem; }
+    .display-2 { font-size: 4rem; }
+    .display-3 { font-size: 3rem; }
 
     p {
         line-height: 1.8;
         margin: 0 0 1.25rem 0;
-    }
-
-    .section-bg {
-        background-color: ${ setColor.colorPi_3 };
-        width: 100%;
     }
 
     .container {
@@ -96,13 +97,6 @@ const Globals = createGlobalStyle`
     .bcg {
         min-height: 100vh;
         display: grid;
-        place-items: center;
-    }
-
-    .banner {
-        min-height: 35vh;
-        display: grid;
-        padding: 10rem 0;
         place-items: center;
     }
 
@@ -120,19 +114,71 @@ const Globals = createGlobalStyle`
     }
     
     .btn {
-        background-color: ${ setColor.colorAlpha };
-        border: 1px solid ${ setColor.colorAlpha };
         border-radius: ${ setRadius.radiusBeta };
-        color: ${ setColor.colorSigma };
-        font-size: 1.6rem;
-        padding: 1rem 3rem;
+        display: inline-block;
+        font-size: 1.5rem;
+        font-weight: 500;
+        margin-top: 1rem;
+        padding: 0.8rem 3rem;
         text-transform: capitalize;
-        transition: all 0.5s linear;
+        ${ setTransition() };
+        cursor: pointer;
+    }
 
-        &:hover {
-            background-color: ${ setColor.colorDelta_2 };
-            color: ${ setColor.colorSigma };
-            cursor: pointer;
+    button.btn {
+        padding: 1.6rem 3rem;
+    }
+
+    .btn.border {
+        background-color: transparent;
+        
+        &:hover {   
+            background-color: ${ setColor.delta_2 };
+            color: ${ setColor.sigma };
+        }
+    }
+
+    .btn.border.dark {
+        border: 1px solid ${ setColor.delta_1 };
+        color: ${ setColor.delta_1 };
+        
+        &:hover {   
+            background-color: ${ setColor.delta_2 };
+            color: ${ setColor.sigma };
+        }
+    }
+
+    .btn.border.light {
+        border: 1px solid ${ setColor.sigma };
+        color: ${ setColor.sigma };
+        
+        &:hover {   
+            background-color: ${ setColor.delta_2 };
+            color: ${ setColor.sigma };
+        }
+    }
+
+    .dark-button {
+        background-color: ${ setColor.delta_1 };
+        color: ${ setColor.sigma };
+        border: none;
+        
+        &:hover {   
+            background-color: ${ setColor.delta_2 };
+            border: none;
+            color: ${ setColor.sigma };
+        }
+    }
+
+    .light-button {
+        background-color: ${ setColor.sigma };
+        color: ${ setColor.gamma };
+        border: none;
+        
+        &:hover {   
+            background-color: ${ setColor.delta_2 };
+            border: none;
+            color: ${ setColor.sigma };
         }
     }
 
@@ -142,6 +188,10 @@ const Globals = createGlobalStyle`
 
     .p-y {
         padding: 10rem 0;
+    }
+
+    .vh-100 {
+        min-height: 100vh;
     }
 `
 

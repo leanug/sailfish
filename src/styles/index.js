@@ -3,22 +3,18 @@
  */
 
 export const setColor = {
-    colorAlpha  : "#666666",
-    colorGamma  : "#0F7BEC",
-    colorDelta_1: "#19191A",
-    colorDelta_2: "#313133",
-    colorDelta_3: "#1E1F23",
-    colorPi_1   : "#131313",
-    colorPi_2   : "#171717",
-    colorPi_3   : "#1C1D20",
-    colorPi_4   : "#F3F3F3",
-    colorPi_5   : "#F6F6F6",  
-    colorSigma  : "#FFFFFF",
+    alpha  : "#FFD948", // yellow
+    gamma  : "#0080FF", // blue 
+    delta_1: "#1B1A1F", // dark 1
+    delta_2: "#2C2B33", // dark 2
+    delta_3: "#5D5A6B", // dark 3
+    sigma  : "#FFFFFF", // white 0
+    tau    : "#F6F6F6", // white 1
 }
 
 export const setFont = {
-    primaryFont  : '"Roboto"',
-    secondaryFont: '"Roboto"'
+    primaryFont  : '"Rubik"',
+    secondaryFont: '"Rubik"'
 }
 
 export const setPostMaxWidth = {
@@ -41,9 +37,9 @@ export const setGridGap = {
 }
 
 export const setRadius = {
-    radius:       '1rem',
     radiusAlpha:  '1rem',
     radiusBeta:   '0.5rem',
+    radiusGamma:  '0.2rem',
 }
 
 export const setSectionPadding = {
