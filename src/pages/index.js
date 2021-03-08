@@ -65,7 +65,7 @@ const IndexPage = () => {
                         <p className="display-1">Fast single page / multi-page websites</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, facilis!</p>
-                        <Link className="btn" to="/">Find out more</Link>
+                        <b><Link to="/">Link one</Link></b>
                     </div>
                 </div>
             </div>
