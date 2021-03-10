@@ -25,7 +25,7 @@ const Globals = createGlobalStyle`
         background:  ${ setColor.sigma };
         color:       ${ setColor.delta_1 };
         font-family: ${ setFont.primaryFont };
-        font-size: 1.5em;
+        font-size: 1.6em;
         line-height: 2;
     }
 
@@ -62,15 +62,6 @@ const Globals = createGlobalStyle`
     h5, .h5 { font-size: 1em; }
     h6, .h6 { font-size: 0.875em; }
 
-    @media screen and ( min-width: ${ setBreakpoint.medium } ) {
-        h1, .h1 { font-size: 3em; }
-        h2, .h2 { font-size: 2em; }
-        h3, .h3 { font-size: 1.6em; }
-        h4, .h4 { font-size: 1.3em; }
-        h5, .h5 { font-size: 1em; }
-        h6, .h6 { font-size: 0.875em; }
-    }
-
     .display-1, 
     .display-2, 
     .display-3 {
@@ -79,9 +70,22 @@ const Globals = createGlobalStyle`
         line-height: 1.1;
      }
 
-    .display-1 { font-size: 6rem; }
-    .display-2 { font-size: 4rem; }
-    .display-3 { font-size: 3rem; }
+    .display-1 { font-size: 4rem; }
+    .display-2 { font-size: 3rem; }
+    .display-3 { font-size: 2rem; }
+
+    @media screen and ( min-width: ${ setBreakpoint.medium } ) {
+        h1, .h1 { font-size: 3em; }
+        h2, .h2 { font-size: 2em; }
+        h3, .h3 { font-size: 1.6em; }
+        h4, .h4 { font-size: 1.3em; }
+        h5, .h5 { font-size: 1em; }
+        h6, .h6 { font-size: 0.875em; }
+
+        .display-1 { font-size: 6rem; }
+        .display-2 { font-size: 4rem; }
+        .display-3 { font-size: 3rem; }
+    }
 
     p {
         line-height: 1.8;
@@ -133,8 +137,7 @@ const Globals = createGlobalStyle`
         background-color: transparent;
         
         &:hover {   
-            background-color: ${ setColor.delta_2 };
-            color: ${ setColor.sigma };
+            opacity: 0.9;
         }
     }
 
@@ -143,8 +146,7 @@ const Globals = createGlobalStyle`
         color: ${ setColor.delta_1 };
         
         &:hover {   
-            background-color: ${ setColor.delta_2 };
-            color: ${ setColor.sigma };
+            opacity: 0.9;
         }
     }
 
@@ -153,8 +155,7 @@ const Globals = createGlobalStyle`
         color: ${ setColor.sigma };
         
         &:hover {   
-            background-color: ${ setColor.delta_2 };
-            color: ${ setColor.sigma };
+            opacity: 0.9;
         }
     }
 
@@ -164,9 +165,7 @@ const Globals = createGlobalStyle`
         border: none;
         
         &:hover {   
-            background-color: ${ setColor.delta_2 };
-            border: none;
-            color: ${ setColor.sigma };
+            opacity: 0.9;
         }
     }
 
@@ -176,9 +175,7 @@ const Globals = createGlobalStyle`
         border: none;
         
         &:hover {   
-            background-color: ${ setColor.delta_2 };
-            border: none;
-            color: ${ setColor.sigma };
+            opacity: 0.9;
         }
     }
 

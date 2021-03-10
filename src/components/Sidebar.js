@@ -3,7 +3,6 @@ import Links from './Links'
 import { IoMdClose } from 'react-icons/io'
 import styled from 'styled-components'
 import { setColor } from '../styles/'
-import SocialLinks from '../constants/socialLinks'
 
 const Sidebar = ({ isOpen, toggleSidebar }) => (
     <Wrapper 
@@ -19,21 +18,18 @@ const Sidebar = ({ isOpen, toggleSidebar }) => (
       <div className="sidebar-content">
           <Links styleClass={`${isOpen ? 'sidebar-links' : ''}`} />
       </div>
-      <div className="links-container">
-          <SocialLinks styleClass="social-icons-sidebar" />
-      </div>
       <footer>
-          <div>© 2021 Erica Legrand. All rights reserved</div> 
+          <div>&copy; 2021 Sailfish Apps</div> 
       </footer>
     </Wrapper>
 )
 
 const Wrapper = styled.aside`
     &.sidebar {
-      background-color: ${ setColor.colorSigma };
+      background-color: ${ setColor.sigma };
       display: grid;
       grid-auto-flow: row;
-      grid-template-rows: auto auto auto 1fr;
+      grid-template-rows: auto auto 1fr;
       height: 100vh;
       left: 0;
       min-width: 30rem;

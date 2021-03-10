@@ -21,13 +21,13 @@ const NotFoundPage = () => (
 )
 
 const Wrapper = styled.div`
-    min-height: 100vh;
-    display: flex;
     align-items: center;
+    display: flex;
+    min-height: 100vh;
     text-align: center;
 
     a {
-        margin-top:3rem;
+        margin-top: 3rem;
     }
 `
 

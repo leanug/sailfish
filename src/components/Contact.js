@@ -16,7 +16,7 @@ const Contact = () => (
     </Wrapper>
 )
 
-const Wrapper = styled.section`
+const Wrapper = styled.div`
    .info-data > p {
         display: flex;
         align-items: center;

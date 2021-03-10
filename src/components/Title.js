@@ -18,8 +18,7 @@ const Wrapper = styled.div`
   }
 
   & > p {
-    text-transform: uppercase;
-    font-size: 1.2rem;
+    margin-top: 1rem;
   }
 `
 

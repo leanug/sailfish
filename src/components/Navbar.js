@@ -5,7 +5,6 @@ import Links from './Links'
 import styled from 'styled-components'
 import { 
   setBreakpoint, 
-  setGridGap, 
   setTransition } from '../styles/'
 import logo from '../assets/logo.svg'
 

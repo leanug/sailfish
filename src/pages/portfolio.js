@@ -34,18 +34,17 @@ const PortfolioPage = ({ data }) => {
   return (
     <Layout>
        <SEO 
-          description="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde est libero nesciunt aliquid autem quisquam."
+          description="A selection of our latest projects"
           title="Our Projects"
         />
         <Wrapper>
             <div className="container">
-            <Title 
-                title="Projects" 
-                text="Lorem ipsum, dolor sit amet consectetur adipisicing elit."
-                left
-            />
-            <Portfolio portfolio={ projects } />
-        </div>
+              <Title 
+                  title="Projects" 
+                  left
+              />
+              <Portfolio portfolio={ projects } />
+          </div>
         </Wrapper>
     </Layout>
   )

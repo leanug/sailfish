@@ -21,7 +21,8 @@ const Background = ({ children, image, styleClass }) => {
       childImageSharp: { fluid },
     },
   } = useStaticQuery(query)
-
+  console.log('image1: ', image);
+  console.log('image2: ', fluid);
   return (
       <BackgroundImage
         Tag="div"
